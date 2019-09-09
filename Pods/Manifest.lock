@@ -1,0 +1,28 @@
+PODS:
+  - ARCL (1.1.0)
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
+
+DEPENDENCIES:
+  - ARCL
+  - Charts
+  - CocoaLumberjack/Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ARCL
+    - Charts
+    - CocoaLumberjack
+
+SPEC CHECKSUMS:
+  ARCL: 8b0a375942c575472c3cdbec80262d8400f1ec42
+  Charts: ec1f57f9340054155691e84d4544a1d239d382c5
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+
+PODFILE CHECKSUM: 1f5f76a0bdcd92f9c8a71947b5272fa3e36a13d3
+
+COCOAPODS: 1.5.3
