@@ -33,34 +33,5 @@ The application consists of three major functionalities:
 ## Usage
 
 
-### Setting up using CocoaPods
-1. Add to your podfile:
-
-`pod 'ARCL'`
-
-2. In Terminal, navigate to your project folder, then:
-
-`pod update`
-
-`pod install`
-
-3. Add `NSCameraUsageDescription` and `NSLocationWhenInUseUsageDescription` to plist with a brief explanation (see demo project for an example)
-
-### Setting up manually
-1. Add all files from the `ARKit+CoreLocation/Source` directory to your project.
-2. Import ARKit, SceneKit, CoreLocation and MapKit.
-3. Add `NSCameraUsageDescription` and `NSLocationWhenInUseUsageDescription` to plist with a brief explanation (see demo project for an example)
-
-### Issues
-I mentioned this was experimental - currently, ARKit occasionally gets confused as the user is walking through a scene, and may change their position inaccurately. This issue also seems to affect the “euler angles”, or directional information about the device, so after a short distance it may think you’re walking in a different direction.
-
-While Apple can improve ARKit over time, I think there are improvements we can make to avoid those issues, such as recognising when it happens and working to correct it, and by comparing location data with our supposed location to determine if we’ve moved outside a possible bounds.
-
-## Going Forward
-
-We have some Milestones and Issues related to them - anyone is welcome to discuss and contribute to them. Pull requests are welcomed. You can discuss new features/enhancements/bugs either by adding a new Issue or via [the Slack community](https://join.slack.com/t/arcl-dev/shared_invite/enQtMjgzNTcxMDE1NTA0LTZjNDI0MjA3YmFhYjFiNGY4MWY5ZThhZGYzMzcyNTFjNzQzZGVlNmYwOGQ1Y2I5NmJmYTc2MTNjMTZhZTI5ZjU).
-
 ## Thanks
-Library created by [@AndrewProjDent](https://twitter.com/andrewprojdent), but a community effort from here on.
 
-Available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
