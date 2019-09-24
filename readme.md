@@ -4,6 +4,7 @@ This repository documents the source code for a mobile application visualizing b
 - Francisco, A., & Taylor, J. E. (2019). Understanding citizen perspectives on open urban energy data through the development and testing of a community energy feedback system. Applied Energy, 256. [https://doi.org/10.1016/j.apenergy.2019.113804](https://www.sciencedirect.com/science/article/pii/S0306261919314916)
 - Francisco, A., & Taylor, J. E. (2019). Designing community-scale energy feedback. Energy Procedia, 158, 4178-4183. [https://doi.org/10.1016/j.egypro.2019.01.812](https://www.sciencedirect.com/science/article/pii/S1876610219308525)
 
+## Functionalities
 The application consists of three major functionalities:
 
 - Spatial: as users walk through community, augmented reality icons pop-up and display building energy intensity.
