@@ -24,7 +24,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
     
     var updateUserLocationTimer: Timer?
     
-    var userSelectedTime : String = "EL_now"
+    var userSelectedTime : String = "rank1"
     var userSelectedDistance : Double = 300.0
     
     ///Whether to show a map view
@@ -140,7 +140,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
     }
 
     @IBAction func nowButtonPressed(_ sender: Any) {
-        userSelectedTime = "EL_now"
+        userSelectedTime = "rank1"
         
         if buttonNow.backgroundColor == lightGrayColor {
             buttonNow.backgroundColor = darkGrayColor
@@ -157,7 +157,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
     }
     
     @IBAction func monthButtonPressed(_ sender: Any) {
-        userSelectedTime = "EL_month"
+        userSelectedTime = "rank2"
         
         if buttonMonth.backgroundColor == lightGrayColor {
             buttonNow.backgroundColor = lightGrayColor
@@ -173,7 +173,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
     }
     
     @IBAction func yearButtonPressed(_ sender: Any) {
-        userSelectedTime = "EL_year"
+        userSelectedTime = "rank3"
         
         if buttonYear.backgroundColor == lightGrayColor {
             buttonNow.backgroundColor = lightGrayColor
@@ -241,7 +241,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
                             
                             if currentLocation.distance(from: pinCenterLocation) < (distance/3.28084) {
                                 
-                                let pinCenterLocationNode = LocationAnnotationNode(location: pinCenterLocation, titlePlace: dictinary["name"] as? String, elecLevel: dictinary[timeRange] as? Int, type: dictinary["type"] as? String, year: dictinary["year"] as? Int, energy: dictinary["\(timeRange)1"] as? String)
+                                let pinCenterLocationNode = LocationAnnotationNode(location: pinCenterLocation, titlePlace: dictinary["name"] as? String, elecLevel: dictinary[timeRange] as? Int, type: dictinary["type"] as? String, year: dictinary["year"] as? Int, energy: dictinary["\(timeRange)_value"] as? String)
                                 sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: pinCenterLocationNode)
                                 
 
