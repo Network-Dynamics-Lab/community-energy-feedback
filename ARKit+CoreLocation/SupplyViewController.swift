@@ -20,7 +20,7 @@ class SupplyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // define data
     let energySource = ["Renewables", "Nuclear", "Coal", "Gas"]
-    var campusSupply = [2.17, 24.0, 35.9, 37.9]
+    var campusSupply = [2.17, 24.0, 35.9, 37.9]  // userEdit: fill in percentages of each energy source (total should be 100)
     var buildingSupply = [0.0, 0.0, 0.0, 0.0] as [Double]
     var buildingsInPicker = [String]()
     
@@ -111,7 +111,7 @@ class SupplyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonResult = jsonResult as? [[String: Any]] {
-                    for var dictinary in jsonResult {
+                    for dictinary in jsonResult {
                         let titlePlace = dictinary["name"] as! String
                         buildingNames.append(titlePlace)
                     }
@@ -135,7 +135,7 @@ class SupplyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonResult = jsonResult as? [[String: Any]] {
-                    for var dictinary in jsonResult {
+                    for dictinary in jsonResult {
                         let name = dictinary["name"] as! String
                         if name == userSelectedBuilding {
                             
@@ -205,8 +205,8 @@ class SupplyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let chartDataSet2 = BarChartDataSet(entries: dataEntries2, label: legendValue)
         
         let dataSets: [BarChartDataSet] = [chartDataSet1, chartDataSet2]
-        chartDataSet1.colors = [UIColor(red: 248/255, green: 118/255, blue: 109/255, alpha: 1.0)]
-        chartDataSet2.colors = [UIColor(red: 0/255, green: 191/255, blue: 195/255, alpha: 1.0)]
+        chartDataSet1.colors = [UIColor(red:1.00, green:0.65, blue:0.00,  alpha: 1.0)]
+        chartDataSet2.colors = [UIColor(red:0.38, green:0.70, blue:0.74,   alpha: 0.9)]
         let chartData = BarChartData(dataSets: dataSets)
         
         //chartData.setValueFormatter(PercentValueFormatter())

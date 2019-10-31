@@ -19,8 +19,8 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var buildingPercent: UILabel!
     
     // define default data for bar chart
-    let year = ["2013", "2016", "2017"]
-    var campusEnergy = [1.0, 0.97, 0.94]
+    let year = ["2013", "2016", "2017"]  // userEdit: revise years to include in graph (up to three permitted)
+    var campusEnergy = [0.0, 3.0, 6.0]  // userEdit: revise with overall community energy trend
     var buildingEnergy = [0.0, 0.0, 0.0] as [Double]
     var buildingsInPicker = [String]()
     
@@ -38,7 +38,7 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         //Chart formatting: xaxis
         let xaxis = bar.xAxis
-        xaxis.drawGridLinesEnabled = true
+        xaxis.drawGridLinesEnabled = false
         xaxis.gridLineDashLengths = [1.0]
         xaxis.labelPosition = .bottom
         xaxis.labelTextColor = .darkGray
@@ -49,10 +49,11 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //Chart formatting: yaxis
         let yaxis = bar.leftAxis
         yaxis.axisMinimum = 0.0
-        yaxis.axisMaximum = 1.7
+        yaxis.axisMaximum = 30.0
         yaxis.drawGridLinesEnabled = false
-        yaxis.labelTextColor = .darkGray
-        yaxis.drawLabelsEnabled = false    // disables y axis label
+        yaxis.labelTextColor = .lightGray
+        yaxis.axisLineColor = .lightGray
+        //yaxis.drawLabelsEnabled = false    // disables y axis label
         //yaxis. = UIFont!(name: "HelveticaNeue", size: 12.0)
         bar.rightAxis.enabled = false
         yAxisLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
@@ -109,7 +110,7 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonResult = jsonResult as? [[String: Any]] {
-                    for var dictinary in jsonResult {
+                    for dictinary in jsonResult {
                         let titlePlace = dictinary["name"] as! String
                         buildingNames.append(titlePlace)
                     }
@@ -134,15 +135,15 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonResult = jsonResult as? [[String: Any]] {
-                    for var dictinary in jsonResult {
+                    for dictinary in jsonResult {
                         let name = dictinary["name"] as! String
                         if name == userSelectedBuilding {
                             
-                            y13 = dictinary["Y13a"] as! Double
+                            y13 = dictinary["Y1"] as! Double
                             //y14 = dictinary["Y14a"] as! Double
                             //y15 = dictinary["Y15a"] as! Double
-                            y16 = dictinary["Y16a"] as! Double
-                            y17 = dictinary["Y17a"] as! Double
+                            y16 = dictinary["Y2"] as! Double
+                            y17 = dictinary["Y3"] as! Double
                             
                             buildingEnergy = [y13, y16, y17]
                             updateEnergyUI(energyData: buildingEnergy, legend: userSelectedBuilding)
@@ -159,7 +160,7 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         setChart(dataPoints: year, values1: energyData, values2: campusEnergy, legendValue: legend)
         print(energyData)
         
-        let percentChange = Int((1 - energyData[2])*100)
+        let percentChange = Int(energyData[2])
 
         buildingPercent.text = "\(percentChange)%"
 
@@ -188,18 +189,18 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
             .bold("\(-1 * percentChange)%")
             .normal(" since 2013.")
         
-        if percentChange > Int((1.0 - campusEnergy[2]) * 100.0) {
+        if percentChange > Int(campusEnergy[2]) {
             legendLabel.attributedText = decreaseString
-        } else if percentChange < Int((1.0 - campusEnergy[2]) * 100.0) && percentChange > 0 {
+        } else if percentChange < Int(campusEnergy[2]) && percentChange > 0 {
             legendLabel.attributedText = neutralString
         } else {
             legendLabel.attributedText = increaseString
         }
 
         // update smile image
-        if percentChange > Int((1.0 - campusEnergy[2]) * 100.0) {
+        if percentChange > Int(campusEnergy[2]) {
             smile.image = UIImage(named: "smile-happy")
-        } else if percentChange < Int((1.0 - campusEnergy[2]) * 100.0) && percentChange > 0 {
+        } else if percentChange < Int(campusEnergy[2]) && percentChange > 0 {
             smile.image = UIImage(named: "smile-neutral")
         } else {
             smile.image = UIImage(named: "smile-sad")
@@ -209,7 +210,7 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     //Configure Chart settings
     func setChart(dataPoints: [String], values1: [Double], values2: [Double], legendValue: String) {
-        //let thisYAxis = YAxis()
+        let thisYAxis = YAxis()
         
         var dataEntries1: [BarChartDataEntry] = []
         var dataEntries2: [BarChartDataEntry] = []
@@ -225,14 +226,16 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let chartDataSet1 = BarChartDataSet(entries: dataEntries1, label: "Georgia Tech")
         let chartDataSet2 = BarChartDataSet(entries: dataEntries2, label: legendValue)
         
-        let dataSets: [BarChartDataSet] = [chartDataSet1, chartDataSet2]
-        chartDataSet1.colors = [UIColor(red: 248/255, green: 118/255, blue: 109/255, alpha: 1.0)]
-        chartDataSet2.colors = [UIColor(red: 0/255, green: 191/255, blue: 195/255, alpha: 1.0)]
+        let dataSets: [BarChartDataSet] = [chartDataSet2, chartDataSet1]
+        chartDataSet1.colors = [UIColor(red:1.00, green:0.65, blue:0.00, alpha: 1.0)]
+        chartDataSet2.colors = [UIColor(red:0.38, green:0.70, blue:0.74,  alpha: 1.0)]
         let chartData = BarChartData(dataSets: dataSets)
         
         //chartData.setValueFormatter(PercentValueFormatter())
-        //let leftAXis = bar.getAxis(thisYAxis.axisDependency)
-        //leftAXis.valueFormatter = PercentValueFormatter()
+        chartData.setDrawValues(false)  // hides values on bars
+        
+        let leftAXis = bar.getAxis(thisYAxis.axisDependency)
+        leftAXis.valueFormatter = PercentValueFormatter()
         
         let groupSpace = 0.2
         let barSpace = 0.05
@@ -240,8 +243,6 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         let groupCount = self.year.count
         let startXAxis = 0
-        
-        chartData.setDrawValues(false)  // hides values on bars
         
         chartData.barWidth = barWidth
         bar.xAxis.axisMinimum = Double(startXAxis)
@@ -280,6 +281,7 @@ extension UIToolbar {
         return toolBar
     }
 }
+
 
 
 
