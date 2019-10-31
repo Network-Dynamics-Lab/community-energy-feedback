@@ -60,7 +60,7 @@
 		61250D5A20EEA95900F5B5F9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		61250D5C20EEA99100F5B5F9 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		61352885229F5C4D00382296 /* goalsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goalsData.json; sourceTree = "<group>"; };
-		61BFF2AB20F5041D00A0FDFF /* energySupplyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = energySupplyData.json; path = "ARKit+CoreLocation/energySupplyData.json"; sourceTree = SOURCE_ROOT; };
+		61BFF2AB20F5041D00A0FDFF /* energySupplyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = energySupplyData.json; path = "ARKit+CoreLocation/Data/energySupplyData.json"; sourceTree = SOURCE_ROOT; };
 		61D7CB5C20E414AB00574968 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		61E2F7C8211DCB1F00195C62 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		61E2F7C9211DCB1F00195C62 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -106,16 +106,14 @@
 		49A3FBDA1F09988100AA59C8 /* ARKit+CoreLocation */ = {
 			isa = PBXGroup;
 			children = (
+				61C60967236B4B910009BA4D /* Data */,
 				5C45E45020054C41006769B6 /* Views */,
 				49A3FBF31F099A4A00AA59C8 /* Source */,
 				49A3FBDB1F09988100AA59C8 /* AppDelegate.swift */,
-				61BFF2AB20F5041D00A0FDFF /* energySupplyData.json */,
 				61250D5C20EEA99100F5B5F9 /* FourthViewController.swift */,
 				61250D5A20EEA95900F5B5F9 /* ThirdViewController.swift */,
 				49A3FBDF1F09988100AA59C8 /* ViewController.swift */,
-				61352885229F5C4D00382296 /* goalsData.json */,
 				D8C205D01F5B197200675E6E /* NotSupportedViewController.swift */,
-				F286B70D1FFD27C300E100AF /* locations.json */,
 				49A3FBE41F09988100AA59C8 /* Assets.xcassets */,
 				49A3FBE91F09988100AA59C8 /* Info.plist */,
 			);
@@ -158,6 +156,16 @@
 				E95EE6433BDDB08CEA5D36D8 /* Pods-Community Energy Feedback.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		61C60967236B4B910009BA4D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				61352885229F5C4D00382296 /* goalsData.json */,
+				F286B70D1FFD27C300E100AF /* locations.json */,
+				61BFF2AB20F5041D00A0FDFF /* energySupplyData.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		61E2F7C7211DCAE000195C62 /* Custom Views */ = {

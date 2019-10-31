@@ -19,12 +19,30 @@ The application consists of three major functionalities:
 
 <img src="gifs/consumption.gif" width="40%">
 
-## Device Requirements
-- Supports the following devices: iPhone 6S and upwards, iPhone SE, iPad (2017), All iPad Pro models
-- Mapbox API key
+## Usage
+### Compilation/Dependencies
+The project is dependent on several Podfiles. The following should be added to the project podfile:
+
+`pod ARCL`
+`pod Charts`
+`pod CocoaLumberjack`
+
+Next, update and install the podfile. The project should then compile and run in Xcode 11 using any device running iOS 13+. As the app requires camera and location usage, the project should be built on a device rather than a simulator. In order to run the application, open the project in Xcode, connect a device (registered with an Apple Developer Account) and choose the device in the selection menu in the top left, and hit Run.    
 
 ## Data Requirements
 
+
+
+## Development
+The project was written using Swift 4.0 and is organized as follows:
+- Source folder:
+    + **01_ARViewController**
+    + **02_supplyViewController**
+    + **03_consumpViewController**
+- Views folder:
+    + **Main.storyboard**
+    + **Custom Views**
+- Data folder:
 
 ## Usage
 
