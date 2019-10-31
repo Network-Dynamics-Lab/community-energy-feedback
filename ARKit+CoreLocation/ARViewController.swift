@@ -12,7 +12,7 @@ import CocoaLumberjack
 import ARKit
 
 @available(iOS 11.0, *)
-class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, SceneLocationViewDelegate, CLLocationManagerDelegate {
+class ARViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, SceneLocationViewDelegate, CLLocationManagerDelegate {
     let sceneLocationView = SceneLocationView()
     
     let locationManager = CLLocationManager()
@@ -77,7 +77,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
         updateInfoLabelTimer = Timer.scheduledTimer(
             timeInterval: 10,
             target: self,
-            selector: #selector(ViewController.updateInfoLabel),
+            selector: #selector(ARViewController.updateInfoLabel),
             userInfo: nil,
             repeats: true)
         
@@ -102,7 +102,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
             updateUserLocationTimer = Timer.scheduledTimer(
                 timeInterval: 0.5,
                 target: self,
-                selector: #selector(ViewController.updateUserLocation),
+                selector: #selector(ARViewController.updateUserLocation),
                 userInfo: nil,
                 repeats: true)
         }
@@ -215,7 +215,7 @@ class ViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, Sce
             }
         
             // Get GT building info from locations.json
-            if let path = Bundle.main.path(forResource: "locations", ofType: "json") {
+            if let path = Bundle.main.path(forResource: "01_spatial", ofType: "json") {
                 do {
                     
                     let colorArray = [UIColor(red: 102/255, green: 173/255, blue: 143/255, alpha: 0.9),

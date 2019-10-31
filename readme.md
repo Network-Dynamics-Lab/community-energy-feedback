@@ -23,26 +23,26 @@ The application consists of three major functionalities:
 ### Compilation/Dependencies
 The project is dependent on several Podfiles. The following should be added to the project podfile:
 
-`pod ARCL`
-`pod Charts`
-`pod CocoaLumberjack`
+`pod ARCL`  
+`pod Charts`  
+`pod CocoaLumberjack`  
 
 Next, update and install the podfile. The project should then compile and run in Xcode 11 using any device running iOS 13+. As the app requires camera and location usage, the project should be built on a device rather than a simulator. In order to run the application, open the project in Xcode, connect a device (registered with an Apple Developer Account) and choose the device in the selection menu in the top left, and hit Run.    
 
-## Data Requirements
+### Data Requirements
 
 
 
 ## Development
 The project was written using Swift 4.0 and is organized as follows:
-- Source folder:
+- Source folder
     + **01_ARViewController**
     + **02_supplyViewController**
     + **03_consumpViewController**
-- Views folder:
+- Views folder
     + **Main.storyboard**
     + **Custom Views**
-- Data folder:
+- Data folder
 
 ## Usage
 

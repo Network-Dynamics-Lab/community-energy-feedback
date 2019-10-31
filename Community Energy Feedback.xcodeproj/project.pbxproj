@@ -11,7 +11,7 @@
 		4901EF051F1B7D560067870D /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901EF041F1B7D560067870D /* SceneLocationEstimate+Extensions.swift */; };
 		49099E391F24BAE5007B76FD /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49099E381F24BAE5007B76FD /* SCNVector3+Extensions.swift */; };
 		49A3FBDC1F09988100AA59C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3FBDB1F09988100AA59C8 /* AppDelegate.swift */; };
-		49A3FBE01F09988100AA59C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3FBDF1F09988100AA59C8 /* ViewController.swift */; };
+		49A3FBE01F09988100AA59C8 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3FBDF1F09988100AA59C8 /* ARViewController.swift */; };
 		49A3FBE51F09988100AA59C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A3FBE41F09988100AA59C8 /* Assets.xcassets */; };
 		49A3FBE81F09988100AA59C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A3FBE61F09988100AA59C8 /* LaunchScreen.storyboard */; };
 		49A3FBF51F099A5F00AA59C8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3FBF41F099A5F00AA59C8 /* LocationManager.swift */; };
@@ -25,15 +25,15 @@
 		5C45E45220054D57006769B6 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45E45120054D57006769B6 /* BubbleView.swift */; };
 		5C45E45420054DF6006769B6 /* BubbleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C45E45320054DF6006769B6 /* BubbleView.xib */; };
 		5C45E45620055FCA006769B6 /* BubbleSpriteKitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45E45520055FC9006769B6 /* BubbleSpriteKitScene.swift */; };
-		61250D5B20EEA95900F5B5F9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61250D5A20EEA95900F5B5F9 /* ThirdViewController.swift */; };
-		61250D5D20EEA99100F5B5F9 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61250D5C20EEA99100F5B5F9 /* FourthViewController.swift */; };
-		61352886229F5C4D00382296 /* goalsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 61352885229F5C4D00382296 /* goalsData.json */; };
-		61BFF2AC20F5041D00A0FDFF /* energySupplyData.json in Resources */ = {isa = PBXBuildFile; fileRef = 61BFF2AB20F5041D00A0FDFF /* energySupplyData.json */; };
+		61250D5B20EEA95900F5B5F9 /* SupplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61250D5A20EEA95900F5B5F9 /* SupplyViewController.swift */; };
+		61250D5D20EEA99100F5B5F9 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61250D5C20EEA99100F5B5F9 /* ConsumptionViewController.swift */; };
+		61352886229F5C4D00382296 /* 03_energyConsumption.json in Resources */ = {isa = PBXBuildFile; fileRef = 61352885229F5C4D00382296 /* 03_energyConsumption.json */; };
+		61BFF2AC20F5041D00A0FDFF /* 02_energySupply.json in Resources */ = {isa = PBXBuildFile; fileRef = 61BFF2AB20F5041D00A0FDFF /* 02_energySupply.json */; };
 		61D7CB5D20E414AB00574968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D7CB5C20E414AB00574968 /* Main.storyboard */; };
 		61E2F7CA211DCB1F00195C62 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2F7C8211DCB1F00195C62 /* TableViewCell.swift */; };
 		61E2F7CB211DCB1F00195C62 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E2F7C9211DCB1F00195C62 /* TableViewCell.xib */; };
 		D8C205D11F5B197200675E6E /* NotSupportedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C205D01F5B197200675E6E /* NotSupportedViewController.swift */; };
-		F286B70E1FFD27C300E100AF /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = F286B70D1FFD27C300E100AF /* locations.json */; };
+		F286B70E1FFD27C300E100AF /* 01_spatial.json in Resources */ = {isa = PBXBuildFile; fileRef = F286B70D1FFD27C300E100AF /* 01_spatial.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		49099E381F24BAE5007B76FD /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
 		49A3FBD81F09988100AA59C8 /* Community Energy Feedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Energy Feedback.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A3FBDB1F09988100AA59C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49A3FBDF1F09988100AA59C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49A3FBDF1F09988100AA59C8 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		49A3FBE41F09988100AA59C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A3FBE71F09988100AA59C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49A3FBE91F09988100AA59C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,10 +57,10 @@
 		5C45E45120054D57006769B6 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		5C45E45320054DF6006769B6 /* BubbleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleView.xib; sourceTree = "<group>"; };
 		5C45E45520055FC9006769B6 /* BubbleSpriteKitScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSpriteKitScene.swift; sourceTree = "<group>"; };
-		61250D5A20EEA95900F5B5F9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		61250D5C20EEA99100F5B5F9 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		61352885229F5C4D00382296 /* goalsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goalsData.json; sourceTree = "<group>"; };
-		61BFF2AB20F5041D00A0FDFF /* energySupplyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = energySupplyData.json; path = "ARKit+CoreLocation/Data/energySupplyData.json"; sourceTree = SOURCE_ROOT; };
+		61250D5A20EEA95900F5B5F9 /* SupplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplyViewController.swift; sourceTree = "<group>"; };
+		61250D5C20EEA99100F5B5F9 /* ConsumptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionViewController.swift; sourceTree = "<group>"; };
+		61352885229F5C4D00382296 /* 03_energyConsumption.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 03_energyConsumption.json; sourceTree = "<group>"; };
+		61BFF2AB20F5041D00A0FDFF /* 02_energySupply.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 02_energySupply.json; path = "ARKit+CoreLocation/Data/02_energySupply.json"; sourceTree = SOURCE_ROOT; };
 		61D7CB5C20E414AB00574968 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		61E2F7C8211DCB1F00195C62 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		61E2F7C9211DCB1F00195C62 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		D8C205D01F5B197200675E6E /* NotSupportedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotSupportedViewController.swift; sourceTree = "<group>"; };
 		E95EE6433BDDB08CEA5D36D8 /* Pods-Community Energy Feedback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Community Energy Feedback.release.xcconfig"; path = "Pods/Target Support Files/Pods-Community Energy Feedback/Pods-Community Energy Feedback.release.xcconfig"; sourceTree = "<group>"; };
 		F05101972EDF8F01CEE4D587 /* Pods-Community Energy Feedback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Community Energy Feedback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Community Energy Feedback/Pods-Community Energy Feedback.debug.xcconfig"; sourceTree = "<group>"; };
-		F286B70D1FFD27C300E100AF /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		F286B70D1FFD27C300E100AF /* 01_spatial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 01_spatial.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +110,9 @@
 				5C45E45020054C41006769B6 /* Views */,
 				49A3FBF31F099A4A00AA59C8 /* Source */,
 				49A3FBDB1F09988100AA59C8 /* AppDelegate.swift */,
-				61250D5C20EEA99100F5B5F9 /* FourthViewController.swift */,
-				61250D5A20EEA95900F5B5F9 /* ThirdViewController.swift */,
-				49A3FBDF1F09988100AA59C8 /* ViewController.swift */,
+				61250D5C20EEA99100F5B5F9 /* ConsumptionViewController.swift */,
+				61250D5A20EEA95900F5B5F9 /* SupplyViewController.swift */,
+				49A3FBDF1F09988100AA59C8 /* ARViewController.swift */,
 				D8C205D01F5B197200675E6E /* NotSupportedViewController.swift */,
 				49A3FBE41F09988100AA59C8 /* Assets.xcassets */,
 				49A3FBE91F09988100AA59C8 /* Info.plist */,
@@ -161,9 +161,9 @@
 		61C60967236B4B910009BA4D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				61352885229F5C4D00382296 /* goalsData.json */,
-				F286B70D1FFD27C300E100AF /* locations.json */,
-				61BFF2AB20F5041D00A0FDFF /* energySupplyData.json */,
+				61352885229F5C4D00382296 /* 03_energyConsumption.json */,
+				F286B70D1FFD27C300E100AF /* 01_spatial.json */,
+				61BFF2AB20F5041D00A0FDFF /* 02_energySupply.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -251,11 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61352886229F5C4D00382296 /* goalsData.json in Resources */,
+				61352886229F5C4D00382296 /* 03_energyConsumption.json in Resources */,
 				49A3FBE81F09988100AA59C8 /* LaunchScreen.storyboard in Resources */,
 				61E2F7CB211DCB1F00195C62 /* TableViewCell.xib in Resources */,
-				F286B70E1FFD27C300E100AF /* locations.json in Resources */,
-				61BFF2AC20F5041D00A0FDFF /* energySupplyData.json in Resources */,
+				F286B70E1FFD27C300E100AF /* 01_spatial.json in Resources */,
+				61BFF2AC20F5041D00A0FDFF /* 02_energySupply.json in Resources */,
 				61D7CB5D20E414AB00574968 /* Main.storyboard in Resources */,
 				5C45E45420054DF6006769B6 /* BubbleView.xib in Resources */,
 				49A3FBE51F09988100AA59C8 /* Assets.xcassets in Resources */,
@@ -314,7 +314,7 @@
 			files = (
 				49099E391F24BAE5007B76FD /* SCNVector3+Extensions.swift in Sources */,
 				49A3FBF71F099C8100AA59C8 /* SceneLocationView.swift in Sources */,
-				61250D5D20EEA99100F5B5F9 /* FourthViewController.swift in Sources */,
+				61250D5D20EEA99100F5B5F9 /* ConsumptionViewController.swift in Sources */,
 				5C45E45220054D57006769B6 /* BubbleView.swift in Sources */,
 				5C45E45620055FCA006769B6 /* BubbleSpriteKitScene.swift in Sources */,
 				49A3FC031F09BADB00AA59C8 /* FloatingPoint+Radians.swift in Sources */,
@@ -322,9 +322,9 @@
 				49A3FBFF1F09B1D200AA59C8 /* LocationNode.swift in Sources */,
 				49A3FBFD1F09B00400AA59C8 /* CLLocation+Extensions.swift in Sources */,
 				61E2F7CA211DCB1F00195C62 /* TableViewCell.swift in Sources */,
-				61250D5B20EEA95900F5B5F9 /* ThirdViewController.swift in Sources */,
+				61250D5B20EEA95900F5B5F9 /* SupplyViewController.swift in Sources */,
 				49A3FC051F0A423800AA59C8 /* CGPoint+Extensions.swift in Sources */,
-				49A3FBE01F09988100AA59C8 /* ViewController.swift in Sources */,
+				49A3FBE01F09988100AA59C8 /* ARViewController.swift in Sources */,
 				4901EF051F1B7D560067870D /* SceneLocationEstimate+Extensions.swift in Sources */,
 				49A3FC011F09B9CF00AA59C8 /* SceneLocationEstimate.swift in Sources */,
 				49A3FBDC1F09988100AA59C8 /* AppDelegate.swift in Sources */,

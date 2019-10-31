@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class FourthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var bar: BarChartView!
@@ -33,7 +33,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         textField.inputView = picker
         textField.text = "Select a building     \u{25BE}"
         buildingsInPicker = getBuildingNames().sorted{ $0 < $1 }
-        let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(FourthViewController.dismissPicker))
+        let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(ConsumptionViewController.dismissPicker))
         textField.inputAccessoryView = toolBar
         
         //Chart formatting: xaxis
@@ -101,10 +101,10 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         textField.text = buildingsInPicker[row]
     }
     
-    //Get list of building names for picker from locations.json
+    //Get list of building names for picker from 01_spatial.json
     func getBuildingNames() -> [String] {
         var buildingNames = [String]()
-        if let path = Bundle.main.path(forResource: "locations", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "01_spatial", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
@@ -129,7 +129,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         var y16 = 0.0
         var y17 = 0.0
         var buildingEnergy = [Double]()
-        if let path = Bundle.main.path(forResource: "goalsData", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "03_energyConsumption", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)

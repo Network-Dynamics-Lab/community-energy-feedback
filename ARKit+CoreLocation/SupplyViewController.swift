@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class ThirdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SupplyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var header: UIView!
     @IBOutlet weak var hBar: HorizontalBarChartView!
@@ -33,7 +33,7 @@ class ThirdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         theTextField.inputView = picker
         theTextField.text = "Select a building     \u{25BE}"
         buildingsInPicker = getBuildingNames().sorted { $0 < $1 }
-        let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(ThirdViewController.dismissPicker))
+        let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(SupplyViewController.dismissPicker))
         theTextField.inputAccessoryView = toolBar
 
         //Chart formatting: xaxis
@@ -106,7 +106,7 @@ class ThirdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     //Get list of building names for picker
     func getBuildingNames() -> [String] {
         var buildingNames = [String]()
-        if let path = Bundle.main.path(forResource: "locations", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "01_spatial", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
@@ -122,7 +122,7 @@ class ThirdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return buildingNames
     }
     
-    //Retrieve new building data once user selects a different building on the picker from energySupplyData.json
+    //Retrieve new building data once user selects a different building on the picker from 02_energySupply.json
     func getEnergyData(userSelectedBuilding: String) {
         
         var renew = 0.0
@@ -130,7 +130,7 @@ class ThirdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         var coal = 0.0
         var gas = 0.0
         var buildingSupply = [Double]()
-        if let path = Bundle.main.path(forResource: "energySupplyData", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "02_energySupply", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
