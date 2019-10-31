@@ -22,7 +22,6 @@ The application consists of three major functionalities:
 ## Device Requirements
 - Supports the following devices: iPhone 6S and upwards, iPhone SE, iPad (2017), All iPad Pro models
 - Mapbox API key
-- Firebase API key
 
 ## Data Requirements
 
