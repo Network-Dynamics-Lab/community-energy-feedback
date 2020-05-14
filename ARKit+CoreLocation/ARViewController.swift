@@ -25,7 +25,7 @@ class ARViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, S
     var updateUserLocationTimer: Timer?
     
     var userSelectedTime : String = "rank1"
-    var userSelectedDistance : Double = 300.0
+    var userSelectedDistance : Double = 2000.0  // programmerInput
     
     ///Whether to show a map view
     ///The initial value is respected
@@ -209,7 +209,6 @@ class ARViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, S
     func updateListOfLocations(timeRange : String, distance : Double) {
         
         if let currentLocation = sceneLocationView.currentLocation(), !searchDone {
-            
             for node in sceneLocationView.locationNodes {
                 sceneLocationView.removeLocationNode(locationNode: node)
             }
@@ -217,25 +216,26 @@ class ARViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, S
             // Get GT building info from locations.json
             if let path = Bundle.main.path(forResource: "01_spatial", ofType: "json") {
                 do {
-                    
+
                     let colorArray = [UIColor(red: 102/255, green: 173/255, blue: 143/255, alpha: 0.9),
                                       UIColor(red: 171/255, green: 174/255, blue: 88/255, alpha: 0.9),
                                       UIColor(red: 218/255, green: 173/255, blue: 57/255, alpha: 0.9),
                                       UIColor(red: 233/255, green: 128/255, blue: 60/255, alpha: 0.9),
                                       UIColor(red: 246/255, green: 93/255, blue: 62/255, alpha: 0.9)]
-                    
+
                     let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+
                     let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                     
-
+                    
                     if let jsonResult = jsonResult as? [[String: Any]] {
                         self.mapView.annotations.forEach{
                             if !($0 is MKUserLocation) {
                                 self.mapView.removeAnnotation($0)
                             }
                         }
-                        
-                        for var dictinary in jsonResult {
+
+                        for dictinary in jsonResult {
                             let pinCenterCoordinate = CLLocationCoordinate2D(latitude: dictinary["latitude"] as! CLLocationDegrees, longitude: dictinary["longitude"] as! CLLocationDegrees)
                             let pinCenterLocation = CLLocation(coordinate: pinCenterCoordinate, altitude: dictinary["altitude"] as! CLLocationDegrees)
                             
@@ -319,7 +319,7 @@ class ARViewController: UIViewController, MKMapViewDelegate, ARSKViewDelegate, S
     }
     
     @objc func updateInfoLabel() {
-
+        
         updateListOfLocations(timeRange: userSelectedTime, distance: userSelectedDistance)
         
     }

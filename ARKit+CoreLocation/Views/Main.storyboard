@@ -192,7 +192,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="200" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="dOH-4v-r2c">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="200" maxValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="dOH-4v-r2c">
                                 <rect key="frame" x="-79" y="653" width="204" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="psu-NF-IpT"/>

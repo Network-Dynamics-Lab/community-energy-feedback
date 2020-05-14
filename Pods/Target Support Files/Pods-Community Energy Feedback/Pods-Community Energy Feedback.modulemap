@@ -1,4 +1,4 @@
-framework module Pods_Community_Energy_Feedback {
+module Pods_Community_Energy_Feedback {
   umbrella header "Pods-Community Energy Feedback-umbrella.h"
 
   export *

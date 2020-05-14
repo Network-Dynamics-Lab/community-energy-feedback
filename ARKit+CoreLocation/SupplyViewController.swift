@@ -20,7 +20,7 @@ class SupplyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // define data
     let energySource = ["Renewables", "Nuclear", "Coal", "Gas"]
-    var campusSupply = [2.17, 24.0, 35.9, 37.9]  // userEdit: fill in percentages of each energy source (total should be 100)
+    var campusSupply = [2.17, 24.0, 35.9, 37.9]  // programmerInput: fill in percentages of each energy source (total should be 100)
     var buildingSupply = [0.0, 0.0, 0.0, 0.0] as [Double]
     var buildingsInPicker = [String]()
     

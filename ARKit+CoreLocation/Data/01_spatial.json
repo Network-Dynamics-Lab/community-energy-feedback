@@ -1,1 +1,44 @@
-[{"name":"Coda Building","latitude":33.775506,"longitude":-84.387632,"altitude":300,"type":"Office","year":2018,"rank1_value":"17 kWh/sq-ft","rank2_value":"624 kWh/sq-ft","rank3_value":"8368 kWh/sq-ft","rank1":1,"rank2":1,"rank3":1},{"name":"Sun Trust Building","latitude":33.774909,"longitude":-84.387626,"altitude":300,"type":"Bank","year":1920,"rank1_value":"26 kWh/sq-ft","rank2_value":"920 kWh/sq-ft","rank3_value":"12648 kWh/sq-ft","rank1":2,"rank2":2,"rank3":2},{"name":"The Biltmore","latitude":33.776861,"longitude":-84.386958,"altitude":300,"type":"Hotel","year":1924,"rank1_value":"15 kWh/sq-ft","rank2_value":"551 kWh/sq-ft","rank3_value":"6165 kWh/sq-ft","rank1":1,"rank2":1,"rank3":1},{"name":"The Biltmore","latitude":33.714891,"longitude":-84.415846,"altitude":300,"type":"Hotel","year":1924,"rank1_value":"15 kWh/sq-ft","rank2_value":"551 kWh/sq-ft","rank3_value":"6165 kWh/sq-ft","rank1":1,"rank2":1,"rank3":1}]
+[
+ {
+   "name": "Building 1",
+   "latitude": 33.715447,
+   "longitude": -84.416281,
+   "altitude": 290,
+   "rank1_value": "0.57 kWh/ft2",
+   "rank2_value": "492 kWh/ft2",
+   "rank3_value": "3702 kWh/ft2",
+   "rank1": 3,
+   "rank2": 4,
+   "rank3": 3,
+   "type": "Office",
+   "year": 1969
+ },
+ {
+   "name": "Building 2",
+   "latitude": 33.715849,
+   "longitude": -84.416292,
+   "altitude": 290,
+   "rank1_value": "0.44 kWh/ft2",
+   "rank2_value": "492 kWh/ft2",
+   "rank3_value": "4936 kWh/ft2",
+   "rank1": 2,
+   "rank2": 4,
+   "rank3": 4,
+   "type": "Laboratory",
+   "year": 1967
+ },
+ {
+   "name": "Building 3",
+   "latitude": 33.715724,
+   "longitude": -84.415836,
+   "altitude": 290,
+   "rank1_value": "0.5 kWh/ft2",
+   "rank2_value": "615 kWh/ft2",
+   "rank3_value": "2468 kWh/ft2",
+   "rank1": 3,
+   "rank2": 5,
+   "rank3": 2,
+   "type": "Office",
+   "year": 1998
+ }
+]

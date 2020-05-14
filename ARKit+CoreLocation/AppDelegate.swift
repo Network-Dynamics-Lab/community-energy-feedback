@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Override point for customization after application launch.
-        DDLog.add(DDTTYLogger.sharedInstance) // TTY = Xcode console
+        DDLog.add(DDTTYLogger.sharedInstance as! DDLogger) // TTY = Xcode console
         let fileLogger: DDFileLogger = DDFileLogger() // File Logger
         fileLogger.rollingFrequency = TimeInterval(60*60*24)  // 24 hours
         fileLogger.logFileManager.maximumNumberOfLogFiles = 7

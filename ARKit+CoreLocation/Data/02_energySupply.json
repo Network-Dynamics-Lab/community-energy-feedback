@@ -1,1 +1,29 @@
-[{"name":"Coda Building","annualUse":8367.9107,"annualProd":0,"gas":38,"coal":36,"nuclear":24,"renewGP":2,"renewBuilding":0,"renewBoth":2},{"name":"Sun Trust Building","annualUse":12648.1269,"annualProd":0,"gas":36.3725,"coal":34.4582,"nuclear":22.9721,"renewGP":1.9143,"renewBuilding":4.2829,"renewBoth":6.1972},{"name":"The Biltmore","annualUse":26716.0355,"annualProd":0,"gas":38,"coal":36,"nuclear":24,"renewGP":2,"renewBuilding":0,"renewBoth":2}]
+[
+ {
+   "name": "Building 1",
+   "gas": 38,
+   "coal": 36,
+   "nuclear": 24,
+   "renewGP": 2,
+   "renewBuilding": 0,
+   "renewBoth": 2
+ },
+ {
+   "name": "Building 2",
+   "gas": 36.3725,
+   "coal": 34.4582,
+   "nuclear": 22.9721,
+   "renewGP": 1.9143,
+   "renewBuilding": 4.2829,
+   "renewBoth": 6.1972
+ },
+ {
+   "name": "Building 3",
+   "gas": 38,
+   "coal": 36,
+   "nuclear": 24,
+   "renewGP": 2,
+   "renewBuilding": 0,
+   "renewBoth": 2
+ }
+]

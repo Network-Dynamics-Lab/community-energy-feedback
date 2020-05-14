@@ -19,9 +19,9 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var buildingPercent: UILabel!
     
     // define default data for bar chart
-    let year = ["2013", "2016", "2017"]  // userEdit: revise years to include in graph (up to three permitted)
-    var campusEnergy = [0.0, 3.0, 6.0]  // userEdit: revise with overall community energy trend
-    var buildingEnergy = [0.0, 0.0, 0.0] as [Double]
+    let year = ["2013", "2016", "2017"]  // programmerInput: revise years to include in graph (up to three permitted)
+    var campusEnergy = [0.1, 4.0, 6.0]  // programmerInput: revise with overall community energy trend
+    var buildingEnergy = [0.1, 0.0, 0.0] as [Double]
     var buildingsInPicker = [String]()
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         //Chart formatting: yaxis
         let yaxis = bar.leftAxis
-        yaxis.axisMinimum = 0.0
+        yaxis.axisMinimum = -30.0
         yaxis.axisMaximum = 30.0
         yaxis.drawGridLinesEnabled = false
         yaxis.labelTextColor = .lightGray
@@ -105,7 +105,7 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     //Get list of building names for picker from 01_spatial.json
     func getBuildingNames() -> [String] {
         var buildingNames = [String]()
-        if let path = Bundle.main.path(forResource: "01_spatial", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "03_energyConsumption", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
@@ -124,11 +124,9 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     //Retrieve new building data once user selects a different building on the picker
     func getEnergyData(userSelectedBuilding: String) {
         
-        var y13 = 0.0
-        //var y14 = 0.0
-        //var y15 = 0.0
-        var y16 = 0.0
-        var y17 = 0.0
+        var y1 = 0.0
+        var y2 = 0.0
+        var y3 = 0.0
         var buildingEnergy = [Double]()
         if let path = Bundle.main.path(forResource: "03_energyConsumption", ofType: "json") {
             do {
@@ -139,13 +137,11 @@ class ConsumptionViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         let name = dictinary["name"] as! String
                         if name == userSelectedBuilding {
                             
-                            y13 = dictinary["Y1"] as! Double
-                            //y14 = dictinary["Y14a"] as! Double
-                            //y15 = dictinary["Y15a"] as! Double
-                            y16 = dictinary["Y2"] as! Double
-                            y17 = dictinary["Y3"] as! Double
+                            y1 = dictinary["Y1"] as! Double
+                            y2 = dictinary["Y2"] as! Double
+                            y3 = dictinary["Y3"] as! Double
                             
-                            buildingEnergy = [y13, y16, y17]
+                            buildingEnergy = [y1, y2, y3]
                             updateEnergyUI(energyData: buildingEnergy, legend: userSelectedBuilding)
                         }
                     }

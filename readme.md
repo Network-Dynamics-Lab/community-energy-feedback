@@ -36,9 +36,9 @@ Next, update and install the podfile. The project should then compile and run in
 ## Development
 The project was written using Swift 4.0 and is organized as follows:
 - Source folder
-    + **01_ARViewController**
-    + **02_supplyViewController**
-    + **03_consumpViewController**
+    + **ARViewController**
+    + **SupplyViewController**
+    + **ConsumptionViewController**
 - Views folder
     + **Main.storyboard**
     + **Custom Views**
