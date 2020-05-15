@@ -31,8 +31,6 @@
 		61BFF2AC20F5041D00A0FDFF /* 02_energySupply.json in Resources */ = {isa = PBXBuildFile; fileRef = 61BFF2AB20F5041D00A0FDFF /* 02_energySupply.json */; };
 		61D7CB5D20E414AB00574968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D7CB5C20E414AB00574968 /* Main.storyboard */; };
 		61DD54D3246C61D60012DDD5 /* Pods_Community_Energy_Feedback.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87ECF2FBF596ABBED4EE83 /* Pods_Community_Energy_Feedback.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61E2F7CA211DCB1F00195C62 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2F7C8211DCB1F00195C62 /* TableViewCell.swift */; };
-		61E2F7CB211DCB1F00195C62 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E2F7C9211DCB1F00195C62 /* TableViewCell.xib */; };
 		D8C205D11F5B197200675E6E /* NotSupportedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C205D01F5B197200675E6E /* NotSupportedViewController.swift */; };
 		F286B70E1FFD27C300E100AF /* 01_spatial.json in Resources */ = {isa = PBXBuildFile; fileRef = F286B70D1FFD27C300E100AF /* 01_spatial.json */; };
 /* End PBXBuildFile section */
@@ -81,8 +79,6 @@
 		61DD54C8246C61120012DDD5 /* ARCL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ARCL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DD54CC246C61150012DDD5 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DD54CF246C611A0012DDD5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61E2F7C8211DCB1F00195C62 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		61E2F7C9211DCB1F00195C62 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		6C10523EF85AA6B7CDF962AD /* Pods_ARKit_CoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKit_CoreLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B87ECF2FBF596ABBED4EE83 /* Pods_Community_Energy_Feedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Community_Energy_Feedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A967016A4C9D5DA8BF8AE438 /* Pods-ARKit+CoreLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit+CoreLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit+CoreLocation/Pods-ARKit+CoreLocation.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +107,7 @@
 				49A3FBD91F09988100AA59C8 /* Products */,
 				5F8D9F16076E5CEBAA727F10 /* Pods */,
 				F2E2E005FD78BDD52B0F8A94 /* Frameworks */,
+				6187C917246D9727008491A0 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +174,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6187C917246D9727008491A0 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				9B87ECF2FBF596ABBED4EE83 /* Pods_Community_Energy_Feedback.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		61C60967236B4B910009BA4D /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,8 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				5C45E45520055FC9006769B6 /* BubbleSpriteKitScene.swift */,
-				61E2F7C8211DCB1F00195C62 /* TableViewCell.swift */,
-				61E2F7C9211DCB1F00195C62 /* TableViewCell.xib */,
 				5C45E45120054D57006769B6 /* BubbleView.swift */,
 				5C45E45320054DF6006769B6 /* BubbleView.xib */,
 			);
@@ -275,7 +278,6 @@
 			files = (
 				61352886229F5C4D00382296 /* 03_energyConsumption.json in Resources */,
 				49A3FBE81F09988100AA59C8 /* LaunchScreen.storyboard in Resources */,
-				61E2F7CB211DCB1F00195C62 /* TableViewCell.xib in Resources */,
 				F286B70E1FFD27C300E100AF /* 01_spatial.json in Resources */,
 				61BFF2AC20F5041D00A0FDFF /* 02_energySupply.json in Resources */,
 				61D7CB5D20E414AB00574968 /* Main.storyboard in Resources */,
@@ -321,7 +323,6 @@
 				D8C205D11F5B197200675E6E /* NotSupportedViewController.swift in Sources */,
 				49A3FBFF1F09B1D200AA59C8 /* LocationNode.swift in Sources */,
 				49A3FBFD1F09B00400AA59C8 /* CLLocation+Extensions.swift in Sources */,
-				61E2F7CA211DCB1F00195C62 /* TableViewCell.swift in Sources */,
 				61250D5B20EEA95900F5B5F9 /* SupplyViewController.swift in Sources */,
 				49A3FC051F0A423800AA59C8 /* CGPoint+Extensions.swift in Sources */,
 				49A3FBE01F09988100AA59C8 /* ARViewController.swift in Sources */,
