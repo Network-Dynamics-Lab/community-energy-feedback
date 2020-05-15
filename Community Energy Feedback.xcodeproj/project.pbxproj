@@ -28,26 +28,12 @@
 		61250D5B20EEA95900F5B5F9 /* SupplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61250D5A20EEA95900F5B5F9 /* SupplyViewController.swift */; };
 		61250D5D20EEA99100F5B5F9 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61250D5C20EEA99100F5B5F9 /* ConsumptionViewController.swift */; };
 		61352886229F5C4D00382296 /* 03_energyConsumption.json in Resources */ = {isa = PBXBuildFile; fileRef = 61352885229F5C4D00382296 /* 03_energyConsumption.json */; };
+		61B99369246EF197003506AD /* libPods-Community Energy Feedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEF55139ED45E8583F63D77 /* libPods-Community Energy Feedback.a */; };
 		61BFF2AC20F5041D00A0FDFF /* 02_energySupply.json in Resources */ = {isa = PBXBuildFile; fileRef = 61BFF2AB20F5041D00A0FDFF /* 02_energySupply.json */; };
 		61D7CB5D20E414AB00574968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D7CB5C20E414AB00574968 /* Main.storyboard */; };
-		61DD54D3246C61D60012DDD5 /* Pods_Community_Energy_Feedback.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87ECF2FBF596ABBED4EE83 /* Pods_Community_Energy_Feedback.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C205D11F5B197200675E6E /* NotSupportedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C205D01F5B197200675E6E /* NotSupportedViewController.swift */; };
 		F286B70E1FFD27C300E100AF /* 01_spatial.json in Resources */ = {isa = PBXBuildFile; fileRef = F286B70D1FFD27C300E100AF /* 01_spatial.json */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		61DD54CB246C61120012DDD5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				61DD54D3246C61D60012DDD5 /* Pods_Community_Energy_Feedback.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		38104A8494954E9B79241EAE /* Pods-ARKit+CoreLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit+CoreLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit+CoreLocation/Pods-ARKit+CoreLocation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B99369246EF197003506AD /* libPods-Community Energy Feedback.a in Frameworks */,
 				352666D9E7D7144AE7EFFD75 /* libPods-Community Energy Feedback.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +212,6 @@
 				49A3FBD41F09988100AA59C8 /* Sources */,
 				49A3FBD51F09988100AA59C8 /* Frameworks */,
 				49A3FBD61F09988100AA59C8 /* Resources */,
-				61DD54CB246C61120012DDD5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
